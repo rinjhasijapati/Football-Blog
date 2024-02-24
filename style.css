@@ -62,11 +62,12 @@ h3 {
 }
 
 .image {
-    height: 25.625rem;
-    width: 48.75rem;
+    max-width: 100%;
+    height: auto;
     position: relative;
     left: -0.625rem;
 }
+
 
 section {
     margin-top: 1.25rem; 
@@ -137,4 +138,56 @@ section h4 {
 
 .footer-links a:hover {
     text-decoration: underline;
+}
+
+.gallery {
+    padding: 20px;
+}
+
+.image-collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+}
+
+.image-collage img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+
+/*responsive designs for different screen sizes*/
+@media (max-width: 768px) {
+    .lists {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lists li {
+        margin: 0;
+        margin-top: 0.625rem;
+    }
+
+    .image {
+        width: 700px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .footer-links li {
+        margin: 0;
+        margin-bottom: 0.625rem;
+        position: relative;
+        right: 300px;
+    }
+
+    .footer p {
+        position: relative;
+        left: 300px;
+    }
 }
